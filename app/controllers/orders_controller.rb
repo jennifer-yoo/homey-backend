@@ -14,6 +14,16 @@ class OrdersController < ApplicationController
         order = Order.create(order_params)
         render json: order
     end
+    
+    def edit
+        order = Order.find(params[:id])
+    end
+
+    def update 
+        order = Order.find(params[:id])
+        order.update(total: params[:total], tracking: params[:tracking])
+        render json: order
+    end
 
     private
 

@@ -1,5 +1,5 @@
 class FurnitureSerializer < ActiveModel::Serializer
-  attributes :id, :room, :category, :price, :name, :color, :rating, :image
+  attributes :id, :category, :price, :name, :color, :rating, :image, :threeD
 
 
 end

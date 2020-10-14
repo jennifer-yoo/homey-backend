@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 2020_10_07_041715) do
   enable_extension "plpgsql"
 
   create_table "furnitures", force: :cascade do |t|
-    t.string "room"
     t.string "category"
     t.float "price"
     t.string "name"
     t.string "color"
     t.integer "rating"
     t.string "image"
+    t.string "threeD"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

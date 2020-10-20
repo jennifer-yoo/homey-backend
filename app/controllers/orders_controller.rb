@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
 
     def update 
         order = Order.find(params[:id])
-        order.update(total: params[:total], tracking: params[:tracking])
+        order.update(total: params[:total], tracking: params[:tracking], status: params[:status])
         render json: order
     end
 

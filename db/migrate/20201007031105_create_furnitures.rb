@@ -5,7 +5,7 @@ class CreateFurnitures < ActiveRecord::Migration[6.0]
       t.float :price
       t.string :name
       t.string :color
-      t.integer :rating
+      t.string :description
       t.string :image
       t.string :threeD
 

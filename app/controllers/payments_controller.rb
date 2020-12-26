@@ -21,10 +21,10 @@ class PaymentsController < ApplicationController
     end
 
     def create
-        # order = User.find(params[:id]).orders.last
+        order = User.find(params[:id]).orders.last.total
         
         intent = Stripe::PaymentIntent.create({
-            amount: 1099,
+            amount: order,
             currency: 'usd',
             metadata: {integration_check: 'accept_a_payment'},
         })
